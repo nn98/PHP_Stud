@@ -1,0 +1,150 @@
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 25
+Server version: 5.7.23 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> create database PJ_PC;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use PJ_PC;
+Database changed
+mysql> create table PC (
+    -> PC_NUMBER INT UNSIGNED ,
+    -> PC_STATUS INT UNSIGNED ,
+    -> PC_TEMP INT UNSIGNED
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> use pj_pc;
+Database changed
+mysql> select * from pc;
++-----------+-----------+---------+
+| PC_NUMBER | PC_STATUS | PC_TEMP |
++-----------+-----------+---------+
+|         1 |         0 |    6202 |
+|         2 |         0 |    6202 |
+|         3 |         0 |    6202 |
+|         4 |         0 |    6202 |
+|         5 |         0 |    6202 |
+|         6 |         0 |    6202 |
+|         7 |         0 |    6202 |
+|         8 |         0 |    6202 |
+|         9 |         0 |    6202 |
+|        10 |         0 |    6202 |
+|        11 |         0 |    6202 |
+|        12 |         0 |    6202 |
+|        13 |         0 |    6202 |
+|        14 |         0 |    6202 |
+|        15 |         0 |    6202 |
+|        16 |         0 |    6202 |
+|        17 |         0 |    6202 |
+|        18 |         0 |    6202 |
+|        19 |         0 |    6202 |
+|        20 |         0 |    6202 |
+|        21 |         0 |    6202 |
+|        22 |         0 |    6202 |
+|        23 |         0 |    6202 |
+|        24 |         0 |    6202 |
+|        25 |         0 |    6202 |
+|        26 |         0 |    6202 |
+|        27 |         0 |    6202 |
+|        28 |         0 |    6202 |
+|        29 |         0 |    6202 |
+|        30 |         0 |    6202 |
+|        31 |         0 |    6202 |
+|        32 |         0 |    6202 |
+|        33 |         0 |    6202 |
+|        34 |         0 |    6202 |
+|        35 |         0 |    6202 |
+|        36 |         0 |    6202 |
+|        37 |         0 |    6202 |
+|        38 |         0 |    6202 |
+|        39 |         0 |    6202 |
+|        40 |         0 |    6202 |
+|        41 |         0 |    6202 |
+|        42 |         0 |    6202 |
++-----------+-----------+---------+
+42 rows in set (0.00 sec)
+
+mysql> create table board;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table board (
+    -> seq int not null
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc board;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| seq   | int(11) | NO   |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> drop table board;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table board (
+    -> seq int not null auto_increment
+    -> auther varchar
+    -> title varchar
+    -> content varchar
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'auther varchar
+title varchar
+content varchar
+)' at line 3
+mysql> create database yoohyeok;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use yoohyeok;
+Database changed
+mysql> create table HumanInfo(
+    -> Age int,
+    -> name varchar,
+    -> address varchar
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+address varchar
+)' at line 3
+mysql> create table HumanInfo (
+    -> Age int, name varchar(40), address varchar(40));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into humaninfo values(27,'YooHyeok','Korea');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into humaninfo values(26,'MinSun','Korea');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into humaninfo values(31,'KuYeon','Korea');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from humaninfo;
++------+----------+---------+
+| Age  | name     | address |
++------+----------+---------+
+|   27 | YooHyeok | Korea   |
+|   26 | MinSun   | Korea   |
+|   31 | KuYeon   | Korea   |
++------+----------+---------+
+3 rows in set (0.00 sec)
