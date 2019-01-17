@@ -41,3 +41,41 @@ php 독학- 19/01/04 ~
     }
     ?>
     ```
+    - String[] result로 데이터 받고 스플릿해 사용.
+    ```java
+        test = "http://121.125.203.54/Connect1.php";
+        task = new URLConnector(test);
+        task.start();
+
+        try {
+            task.join();
+            System.out.println("waiting... for result");
+        } catch (InterruptedException e) {
+
+        }
+
+        String result = task.getResult();
+        int stat=-1;
+        try {
+            JSONObject root=new JSONObject(result);
+
+            JSONArray ja = root.getJSONArray("result");
+
+            for(int i = 0; i < ja.length();i++) {
+                JSONObject jo = ja.getJSONObject(i);
+                stat = jo.getInt("PC_STATUS");
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(result);
+
+        String[] s;
+        s=result.trim().split("");
+    ```
+    - 시연 상태의 프로젝트 파일과 비슷하게 팝업형식으로 레이아웃 작성, 버튼 클릭시 데이터 받아오도록 구현.
+    - 스무스하게 업데이트, 업그레이드 성공. 
+    - 심플한 창에 데스크탑 상태들만 표기되도록 변경.
+    - 42개 좌석 설정을 개판으로 했는지 정확한 번호의 데스크탑이 변경되지 않음.
