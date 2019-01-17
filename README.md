@@ -12,7 +12,8 @@ php 독학- 19/01/04 ~
     - 그냥 각 실행시 개별적으로 ip 수정.
     - php 파일에서 결과값 프로젝트 데이터베이스의 pc 테이블 resultset의 각 row , 한개의 행 속 세개의 튜플?중 하나(number, status, temp중 status)를 개별적으로 활용하려 하였으나 순차적으로 사용해야 하는듯---
     
-    ```php echo "\"Num\":\"$row[PC_NUMBER]\", \"Status\":\"$row[PC_STATUS]\", \"Temp\":\"$row[PC_TEMP]\"";
+    ```php 
+    echo "\"Num\":\"$row[PC_NUMBER]\", \"Status\":\"$row[PC_STATUS]\", \"Temp\":\"$row[PC_TEMP]\"";
     ```
     위와 같은 상황에서 
     ```php
