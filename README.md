@@ -26,19 +26,18 @@ php 독학- 19/01/04 ~
     처럼 row의 가장 앞 튜플을 출력할 경우 올바른 번호 출력됨. 
     - /////// php 업데이트 지연으로 생긴 에러였음. php 코드 단축해 필요한 status만 활용 가능하도록 변환.
     ```php
-    <?php
-$conn = mysqli_connect("localhost", "root", "qq192837qq", "pj_pc");
-$query = "select * from pc";
-if($result = mysqli_query($conn, $query)){
-    $row_num = mysqli_num_rows($result);
-            for($i = 0; $i < $row_num; $i++){
-                $row = mysqli_fetch_array($result);
-                echo "$row[PC_STATUS]";
-                    
-                }
-}
-else{
-    echo "failed to get data from database.";
-}
-?>
-```
+    <?php 
+    $conn = mysqli_connect("localhost", "root", "qq192837qq", "pj_pc");
+    $query = "select * from pc";
+    if($result = mysqli_query($conn, $query)){
+        $row_num = mysqli_num_rows($result);
+        for($i = 0; $i < $row_num; $i++){
+            $row = mysqli_fetch_array($result);
+            echo "$row[PC_STATUS]";
+        }
+    }
+    else{
+        echo "failed to get data from database.";
+    }
+    ?>
+    ```
