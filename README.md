@@ -79,7 +79,7 @@ php 독학- 19/01/04 ~
     - 스무스하게 업데이트, 업그레이드 성공. 
     - 심플한 창에 데스크탑 상태들만 표기되도록 변경.
     - 42개 좌석 설정을 개판으로 했는지 정확한 번호의 데스크탑이 변경되지 않음.
-    - <img src="./db0.png" alt="drawing" width="300"/>
+    - <img src="./db0.png" alt="drawing" width="300" height="100"/>
     - <img src="./and0.png"/>
     - <img src="./and1.png"/>
     - <img src="./and2.png">
