@@ -10,7 +10,8 @@ php 독학- 19/01/04 ~
   - 1/18 00:45 기존 프로젝트 데이터베이스와 안드로이드 스튜디오 확실한 연동- ip가 계속 바뀜-
     - 기존 프로젝트에서 사용했던 getLocalHostLANAddress? 메소드 활용 시도- 실패. eclipse와 안스의 패키지 차이 존재?
     - 그냥 각 실행시 개별적으로 ip 수정.
-    - php 파일에서 결과값 프로젝트 데이터베이스의 pc 테이블 resultset의 각 row , 한개의 행 속 세개의 튜플?중 하나(number, status, temp중 status)를 개별적으로 활용하려 하였으나 순차적으로 사용해야 하는듯 ___[php MySQL(mysqli_fetch_array)](https://m.blog.naver.com/diceworld/220295811114) , [DB의 값 가져오기](https://m.blog.naver.com/PostView.nhn?blogId=ijoos&logNo=220839817808&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+    - php 파일에서 결과값 프로젝트 데이터베이스의 pc 테이블 resultset의 각 row , 한개의 행 속 세개의 튜플?중 하나(number, status, temp중 status)를 개별적으로 활용하려 했으나 실패. 순차적으로 사용해야 하는듯 ___
+    - [php MySQL(mysqli_fetch_array)](https://m.blog.naver.com/diceworld/220295811114) , [DB의 값 가져오기](https://m.blog.naver.com/PostView.nhn?blogId=ijoos&logNo=220839817808&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
     
     ```php 
     echo "\"Num\":\"$row[PC_NUMBER]\", \"Status\":\"$row[PC_STATUS]\", \"Temp\":\"$row[PC_TEMP]\"";
