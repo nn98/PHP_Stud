@@ -92,4 +92,4 @@ php 독학- 19/01/04 ~
   - 실질적 코드 작성은 굉장히 간단하고 편하게 이루어짐. 기존의 작업물을 감안하더라도 굉장히 간단한 구성상황.
   - 실제 경진대회 출품을 위해선 굉장히 많은 보완 필요.
 
-# 이후 추가 진행상황 업로드 https://github.com/nn98/PHP_Stud_App00/blob/master/README.md 로 통합
+# [추가 진행상황](https://github.com/nn98/PHP_Stud_App00/blob/master/README.md) 통합 
